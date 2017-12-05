@@ -1,0 +1,5 @@
+{
+    "Name": "LoginAzureRmAccount",
+    "RequiredParameters": [],
+    "OutputParameters": ["AzureRmContext"]
+}
