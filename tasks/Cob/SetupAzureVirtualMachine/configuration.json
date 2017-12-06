@@ -1,0 +1,5 @@
+{
+    "Name": "SetupAzureVirtualMachine",
+    "RequiredParameters": ["AzureRmContext", "VMHost", "Cob/AdminUsername", "Cob/AdminPassword"],
+    "OutputParameters": []
+}

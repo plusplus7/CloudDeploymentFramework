@@ -6,14 +6,10 @@ Param
     [string]$TaskName,
 
     [Parameter(Mandatory=$true)]
-    [ValidateNotNullOrEmpty()]
-    [string]$TaskEnv,
-
-    [Parameter(Mandatory=$true)]
     [hashtable]$Context,
 
     [Parameter(Mandatory=$false)]
-    [Switch]$Validate
+    [Boolean]$Validate
 )
 
 Begin
@@ -21,10 +17,11 @@ Begin
     Write-Verbose "$($TaskName)`: Task starts."
     $currentPath = Get-Location
     $root = (Get-Item $currentPath).parent
-    $taskPath = [io.path]::combine($currentPath, "tasks" , "$TaskEnv", "$TaskName")
+    $taskPath = [io.path]::combine($currentPath, "tasks" , "$TaskName")
     $logFile = [io.path]::combine($taskPath, "log.txt")
 
     $configPath = [io.path]::combine($taskPath, "configuration.json")
+    $executePath = [io.path]::combine($taskPath, "Execute-Task.ps1")
     $settings = Get-Content -Path $configPath -Raw | ConvertFrom-Json
     
     $settings.RequiredParameters | ForEach-Object -Process {
@@ -40,7 +37,7 @@ Process
 {
     if ($Validate)
     {
-        $newContext = $Context
+        $newContext = @{}
         $settings.OutputParameters | ForEach-Object -Process {
             $newContext[$_] = "dummy"
         }
@@ -49,7 +46,7 @@ Process
     {
         try
         {
-            $newContext = & $pwd\tasks\$TaskEnv\$TaskName\Execute-Step.ps1 -Context $Context -Root $root -LogFile $logFile
+            $newContext = & $executePath -Context $Context -Root $root -LogFile $logFile
         }
         catch
         {

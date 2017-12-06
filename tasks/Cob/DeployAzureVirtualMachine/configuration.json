@@ -1,0 +1,5 @@
+{
+    "Name": "DeployAzureVirtualMachineV1",
+    "RequiredParameters": ["AzureRmContext", "AzureSubscriptionName", "Cob/ResourceName", "Cob/Location", "Cob/AdminUsername", "Cob/AdminPassword", "Cob/TemplateUri"],
+    "OutputParameters": ["ResourceGroup", "VMDeployment", "VMHost"]
+}

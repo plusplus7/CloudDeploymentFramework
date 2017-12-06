@@ -15,6 +15,7 @@ Param
 
 Begin
 {
+    $result = @{}
 }
 
 Process
@@ -36,10 +37,10 @@ Process
         throw "Failed to get Azure context"
     }
 
-    $Context.Add("AzureRmContext", $azureRmContext)
+    $result.Add("AzureRmContext", $azureRmContext)
 }
 
 End
 {
-    return $Context
+    return $result
 }
