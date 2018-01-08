@@ -21,7 +21,7 @@ Begin
     $secpasswd = $Context["Cob/AdminPassword"]
     $credential = New-Object System.Management.Automation.PSCredential ($username, $secpasswd)
 
-    $session = New-SSHSession -ComputerName $hostname -Credential $credential
+    $session = New-SSHSession -ComputerName $hostname -Credential $credential -AcceptKey
 }
 
 Process
