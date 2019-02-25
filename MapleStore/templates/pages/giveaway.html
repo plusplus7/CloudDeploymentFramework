@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block title %}枫叶杂货铺{% endblock %}
+
+{% block navbar %}
+
+{% include "navbar.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+<h1> *还没做好* 发放装备</h1>
+
+<form action="/accounts/create">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputCity">角色名 或 角色ID</label>
+            <input type="text" class="form-control" name="character" value="2">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputCity">装备选择</label>
+            <input type="text" class="form-control" name="character" value="2">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="inputCity">力量</label>
+            <input type="text" class="form-control" name="str" value="7">
+            <small id="emailHelp" class="form-text text-muted">不要超过500</small>
+        </div>
+        <div class="form-group col-md-3">
+            <label for="inputCity">敏捷</label>
+            <input type="text" class="form-control" name="dex" value="7">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="inputCity">智力</label>
+            <input type="text" class="form-control" name="int" value="7">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="inputCity">运气</label>
+            <input type="text" class="form-control" name="luk" value="7">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputCity">生命值HP</label>
+            <input type="text" class="form-control" name="hp" value="777">
+            <small id="emailHelp" class="form-text text-muted">不要超过10000</small>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputCity">魔法值MP</label>
+            <input type="text" class="form-control" name="mp" value="777">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="inputCity">物理攻击力</label>
+            <input type="text" class="form-control" name="watk" value="177">
+            <small id="emailHelp" class="form-text text-muted">不要超过200</small>
+        </div>
+        <div class="form-group col-md-3">
+            <label for="inputCity">魔法攻击力</label>
+            <input type="text" class="form-control" name="matk" value="177">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="inputCity">物理防御力</label>
+            <input type="text" class="form-control" name="wdef" value="177">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="inputCity">魔法防御力</label>
+            <input type="text" class="form-control" name="mdef" value="177">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-2">
+            <label for="inputCity">acc</label>
+            <input type="text" class="form-control" name="acc" value="17">
+            <small id="emailHelp" class="form-text text-muted">不要超过100</small>
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputCity">回避率</label>
+            <input type="text" class="form-control" name="avoid" value="17">
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputCity">手技</label>
+            <input type="text" class="form-control" name="hands" value="17">
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputCity">速度</label>
+            <input type="text" class="form-control" name="speed" value="17">
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputCity">跳跃力</label>
+            <input type="text" class="form-control" name="jump" value="17">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">提交</button>
+</form>
+
+{% endblock %}

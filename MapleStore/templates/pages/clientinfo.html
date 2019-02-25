@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}枫叶杂货铺{% endblock %}
+
+{% block navbar %}
+
+{% include "navbar.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+<h1 data-anchor-id="oodi" id="客户端安装指南">客户端安装指南</h1>
+<hr/>
+<div class="md-section-divider"></div>
+<h3 data-anchor-id="7afh" id="1-下载官方079纯净客户端">1. 下载官方079纯净客户端</h3>
+<p data-anchor-id="5zam">可以通过官方渠道下载游戏本体，或者是通过以下链接：</p>
+<p data-anchor-id="c9tp"><a href="https://maplestoryresgrpeadiag.blob.core.windows.net/test/MapleStory079.exe"
+        target="_blank">点击下载</a></p>
+<div class="md-section-divider"></div>
+<h3 data-anchor-id="2njk" id="2-安装一键跳过hs程序">2. 安装一键跳过HS程序</h3>
+<p data-anchor-id="mcjt">下载客户端后，由于HS更新服务器已经被关闭，HS程序不能更新成功，导致游戏无法顺利打开。</p>
+<p data-anchor-id="4pxc">可以使用HS一键跳过工具，请点击以下链接下载:</p>
+<p data-anchor-id="dzqj"><a href="https://maplestoryresgrpeadiag.blob.core.windows.net/test/MapleStory079-SkipHS.zip"
+        target="_blank">点击下载</a></p>
+<p data-anchor-id="rt2e">该zip文件包含两个工具，一个是zip格式的，需要手动处理；第二个是exe格式的，支持自动更新。</p>
+<div class="md-section-divider"></div>
+<h3 data-anchor-id="ke80" id="3-运行游戏">3. 运行游戏</h3>
+<p data-anchor-id="ctz3">将以下代码复制保存为 boot.bat 文件，放到游戏根目录下。</p>
+<div class="md-section-divider"></div>
+<pre class="prettyprint linenums prettyprinted" data-anchor-id="ustw"
+    style=""><ol class="linenums"><li class="L0"><code><span class="pln">echo</span><span class="pun">=&gt;</span><span class="pln">downloadinfo</span><span class="pun">.</span><span class="pln">dat</span></code></li><li class="L1"><code><span class="pln">attrib downloadinfo</span><span class="pun">.</span><span class="pln">dat </span><span class="pun">+</span><span class="pln">h</span></code></li><li class="L2"><code><span class="typ">MapleStory</span><span class="pun">.</span><span class="pln">exe </span><span class="lit">13.67</span><span class="pun">.</span><span class="lit">111.7</span><span class="pln"> </span><span class="lit">8484</span></code></li></ol></pre>
+<p data-anchor-id="q1tb">双击bat文件，即可开始游戏。</p>
+<div class="md-section-divider"></div>
+<h3 data-anchor-id="9yua" id="ps-如何添加账号">P.S. 如何添加账号</h3>
+<p data-anchor-id="0lk7">请通过本工具添加账号。</p>
+
+{% endblock %}
